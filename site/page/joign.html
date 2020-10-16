@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<title>Accueil - Ingénieurs Engagés</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />	
+	<link rel="shortcut icon" type="image/png" href="../image/logo.png"/>
+</head>
+
+<body style="margin: 0px; background-image: url(../image/fond_1.jpg); background-size: cover; background-position: center; background-attachment: fixed">
+
+	<div class="width= 100%; background-color:#333;">
+		<button onclick="myFunction2()" class="bouton">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</button>
+	</div>
+
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+	<script>
+		function myFunction2() {
+		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+		}
+	</script>
+
+	<div id="myDIV" style="display: none;">
+		<ul class="navbar_mobile">
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+				<div class="dropdown-content">
+					<a href="histoire.html" style="text-align: center">Ingénieurs pour demain</a>
+					<a href="valeur.html" style="text-align: center">Nos valeurs</a>
+					<a href="quizz.html" style="text-align: center">Quizz</a>
+				</div>
+			</li>
+			<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+			<li><a href="france.html">A travers la France</a></li>
+			<li><a class="active" href="joign.html">Nous rejoindre</a></li>
+		</ul>
+	</div>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Accueil</a></li>
+		<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+			<div class="dropdown-content">
+				<a href="histoire.html">Ingénieurs pour demain</a>
+				<a href="valeur.html">Nos valeurs</a>
+				<a href="quizz.html">Quizz</a>
+			</div>
+		</li>
+		<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+		<li><a href="france.html">A travers la France</a></li>
+		<li><a class="active" href="joign.html">Nous rejoindre</a></li>
+	</ul>
+
+	<div style="background-image: url(image/fond.jpg); background-size: cover; background-position: center; background-attachment: fixed; display: flex; justify-content: center;">
+		<div class="texte_on_parallax">
+			<div class="texte_index">
+				<h1 style="font-size: 70px;">Nous rejoindre</h1>
+
+				<h1>Faire partie du réseau</h1>
+				<p>Se mettre en réseau permet de s’informer collectivement, de s’inspirer mutuellement, de prendre conscience des enjeux et d’agir ensemble !</p>
+				<p>Si l’esprit critique est souvent un mot d’ordre, la bienveillance et l’ouverture sont aussi des valeurs-clé, alors si tu as des idées de projets ou groupes a monter, ou que tu as simplement envie d’échanger, rejoins vite la communauté !</p>
+				
+				<h2>Entrer en contact avec le mouvement</h2>
+
+				<p>
+					Le mouvement communique via un site Internet, une newsletter mensuelle, un groupe Facebook et un Discord.
+					<ul>
+						<li>La newsletter permet de se tenir au courant de l’actualité du mouvement. Elle contient entre autres l’actualité des groupes locaux et des groupes thématiques nationaux.</li>
+						<li>Le groupe Facebook Ingénieurs Engagés (national) est une fenêtre de communication pour le mouvement. N’importe qui peut contribuer à la vie du groupe Facebook.</li>
+						<li>Le discord Ingénieurs Engagés permet de connaître le mouvement plus en profondeur et de commencer à y participer. C’est là que se concentre la majorité des discussions du mouvement. On y trouve des espaces de partage d’articles et de ressources intéressantes ainsi que des espaces de débats et de discussions. On peut facilement y prendre contact avec un groupe du mouvement, le rejoindre et participer aux discussions de ce groupe. Il contient aussi toutes les informations nécessaires pour créer un nouveau groupe ou projet au sein du mouvement. De plus, l’équipe d’animation est présente pour pouvoir répondre à toutes tes interrogations concernant le mouvement !</li>
+					</ul>
+				</p>
+
+				<h1>Participer au mouvement</h1>
+
+				<h2>Et en pratique, que puis-je faire ?</h2>
+				<p>Tout dépend de ton envie ! Tu peux simplement suivre les discussions sur le Discord ou sur le groupe Facebook et y participer en apportant ton avis, un témoignage, en partageant des documents, des offres de stage ou d’emplois, et en lançant des débats. Et si tu veux participer plus concrètement au collectif, tu pourras même assister aux réunions vocales, apporter ton grain de sel et voter sur les grandes décisions à prendre !</p>
+
+				<h2>Tu as envie de concret, mais participer aux débats ou aux assemblées générales du collectif, c’est pas ton truc ?</h2>
+				<p>Aucun souci, car tu peux rejoindre ou même créer un groupe ou un projet sur Discord, à l’échelle nationale. Ça peut être quelque chose d’ambitieux…ou quelque chose de tout simple : proposer une nouvelle manière de faire vivre le réseau, mettre les membres en lien avec de nouvelles structures, lancer un projet d’ingénierie engagée, lancer une pétition, organiser une mobilisation, créer un événement, rédiger un article… Tant que cela est en accord avec les valeurs relativement larges de la charte, ton projet ne pourra pas être refusé et des membres du réseau sauront certainement t’accompagner dans ton idée. Alors laisse libre cours à ton imagination, et lance-toi !</p>
+
+				<h2>Un projet et des échanges à distance, cela ne te suffit toujours pas ?</h2>
+				<p>Alors rejoins un groupe local, ou lance le mouvement près de chez toi ! C’est ainsi que se sont formés les groupes locaux dans différentes écoles. Il suffit d’une bonne dose de motivation, d’énergie et de temps, et le collectif sera là pour t’aider et te conseiller si tu en as besoin. N’hésite pas à le solliciter !</p>
+
+				<h2>Tu n’es pas ingénieur·e, mais le mouvement t’intéresse  ?</h2>
+				<p>Alors bienvenue parmi nous ! Surtout, ne te mets pas de limites et viens échanger avec le collectif et proposer tes idées, nous serons ravi·e·s de faire ta connaissance !<br>
+					On aime l’interdisciplinarité !</p>
+				<p>A très bientôt sur nos réseaux !
+				</p>
+
+				<div style="display: flex; flex-direction: row; align-content: center;">
+					<a href="https://www.facebook.com/groups/921399084661423/" target="_blank"><img src="../image/facebook.jpg" alt="Facebook" style="width:60px;height:60px;"></a>
+					<a href="https://discord.gg/nhCWBjV" target="_blank"><img src="../image/discord.jpg" alt="Discord" style="width:60px;height:60px;"></a>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+
+<footer>
+	<div class="foot_disp">
+		<p>Site réalisé par : Clément Rousseau |&nbsp;<a href="contact.html" style="color: cornsilk;">Nous contacter</a>&nbsp;|&nbsp;<a href="credit.html" style="color: cornsilk;">Crédits</a></p>
+	</div>
+</footer>

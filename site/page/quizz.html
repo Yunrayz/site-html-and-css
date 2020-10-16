@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<title>Quizz - Ingénieurs Engagés</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />	
+	<link rel="shortcut icon" type="image/png" href="../image/logo.png"/>
+</head>
+
+<body style="margin: 0px;">
+
+	<div class="width= 100%; background-color:#333;">
+		<button onclick="myFunction2()" class="bouton">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</button>
+	</div>
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+	<script>
+		function myFunction2() {
+		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+		}
+	</script>
+
+
+	<div id="myDIV" style="display: none;">
+		<ul class="navbar_mobile">
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+				<div class="dropdown-content">
+					<a href="histoire.html" style="text-align: center">Ingénieurs pour demain</a>
+					<a href="valeur.html" style="text-align: center">Nos valeurs</a>
+					<a class="active" href="quizz.html" style="text-align: center">Quizz</a>
+				</div>
+			</li>
+			<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+			<li><a href="france.html">A travers la France</a></li>
+			<li><a href="joign.html">Nous rejoindre</a></li>
+		</ul>
+	</div>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Accueil</a></li>
+		<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+			<div class="dropdown-content">
+				<a href="histoire.html">Ingénieurs pour demain</a>
+				<a href="valeur.html">Nos valeurs</a>
+				<a class="active" href="quizz.html">Quizz</a>
+			</div>
+		</li>
+		<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+		<li><a href="france.html">A travers la France</a></li>
+		<li><a href="joign.html">Nous rejoindre</a></li>
+	</ul>
+
+
+	<div class="parallax" style="display: flex; flex-direction: column; justify-content: center;">
+		<div class="texte_on_parallax">
+			<h1 style="font-size: 70px">Petit quizz</h1>
+			<div class="quiz-container">
+				<div id="quiz"></div>
+			</div>
+			<button id="previous" class="button">Question précédente</button>
+			<button id="next" class="button">Question suivante</button>
+			<button id="submit" class="button">Envoyer mes réponses</button>
+			<div id="results"></div>
+		</div>
+	</div>
+
+
+	<script>
+		(function() {
+			const myQuestions = [
+		  {
+			question: "Par qui a été créé la vidéo Ingénieur pour Demain ?",
+			answers: {
+			  a: "des élèves de l'INSA de Lyon",
+			  b: "le directeur marketing de Monsanto",
+			  c: "la CTI"
+			},
+			correctAnswer: "a"
+		  },
+		  {
+			question: "Sur quelle plateforme peut-on se retrouver et débattre entre membre ?",
+			answers: {
+			  a: "Caramail",
+			  b: "MSN",
+			  c: "Discord"
+			},
+			correctAnswer: "c"
+		  },
+		  {
+			question: "Que représnte le logo du BDE UTT",
+			answers: {
+			  a: "un canard",
+			  b: "une cravate",
+			  c: "les deux",
+			  d: "un standtrooper"
+			},
+			correctAnswer: "d"
+		  }
+		];
+	  
+		function buildQuiz() {
+		  // we'll need a place to store the HTML output
+		  const output = [];
+	  
+		  // for each question...
+		  myQuestions.forEach((currentQuestion, questionNumber) => {
+			// we'll want to store the list of answer choices
+			const answers = [];
+	  
+			// and for each available answer...
+			for (letter in currentQuestion.answers) {
+			  // ...add an HTML radio button
+			  answers.push(
+				`<label>
+				   <input type="radio" name="question${questionNumber}" value="${letter}">
+					${letter} :
+					${currentQuestion.answers[letter]}
+				 </label>`
+			  );
+			}
+	  
+			// add this question and its answers to the output
+			output.push(
+			  `<div class="slide">
+				 <div class="question"> ${currentQuestion.question} </div>
+				 <div class="answers"> ${answers.join("")} </div>
+			   </div>`
+			);
+		  });
+	  
+		  // finally combine our output list into one string of HTML and put it on the page
+		  quizContainer.innerHTML = output.join("");
+		}
+	  
+		function showResults() {
+		  // gather answer containers from our quiz
+		  const answerContainers = quizContainer.querySelectorAll(".answers");
+	  
+		  // keep track of user's answers
+		  let numCorrect = 0;
+	  
+		  // for each question...
+		  myQuestions.forEach((currentQuestion, questionNumber) => {
+			// find selected answer
+			const answerContainer = answerContainers[questionNumber];
+			const selector = `input[name=question${questionNumber}]:checked`;
+			const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+	  
+			// if answer is correct
+			if (userAnswer === currentQuestion.correctAnswer) {
+			  // add to the number of correct answers
+			  numCorrect++;
+	  
+			  // color the answers green
+			  answerContainers[questionNumber].style.color = "lightgreen";
+			} else {
+			  // if answer is wrong or blank
+			  // color the answers red
+			  answerContainers[questionNumber].style.color = "red";
+			}
+		  });
+	  
+		  // show number of correct answers out of total
+		  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+		}
+	  
+		function showSlide(n) {
+		  slides[currentSlide].classList.remove("active-slide");
+		  slides[n].classList.add("active-slide");
+		  currentSlide = n;
+		  
+		  if (currentSlide === 0) {
+			previousButton.style.display = "none";
+		  } else {
+			previousButton.style.display = "inline-block";
+		  }
+		  
+		  if (currentSlide === slides.length - 1) {
+			nextButton.style.display = "none";
+			submitButton.style.display = "inline-block";
+		  } else {
+			nextButton.style.display = "inline-block";
+			submitButton.style.display = "none";
+		  }
+		}
+	  
+		function showNextSlide() {
+		  showSlide(currentSlide + 1);
+		}
+	  
+		function showPreviousSlide() {
+		  showSlide(currentSlide - 1);
+		}
+	  
+		const quizContainer = document.getElementById("quiz");
+		const resultsContainer = document.getElementById("results");
+		const submitButton = document.getElementById("submit");
+	  
+		// display quiz right away
+		buildQuiz();
+	  
+		const previousButton = document.getElementById("previous");
+		const nextButton = document.getElementById("next");
+		const slides = document.querySelectorAll(".slide");
+		let currentSlide = 0;
+	  
+		showSlide(0);
+	  
+		// on submit, show results
+		submitButton.addEventListener("click", showResults);
+		previousButton.addEventListener("click", showPreviousSlide);
+		nextButton.addEventListener("click", showNextSlide);
+	  })();
+	</script>
+</body>
+
+<footer>
+	<div class="foot_disp">
+		<p>Site réalisé par : Clément Rousseau |&nbsp;<a href="contact.html" style="color: cornsilk;">Nous contacter</a>&nbsp;|&nbsp;<a href="credit.html" style="color: cornsilk;">Crédits</a></p>
+	</div>
+</footer>

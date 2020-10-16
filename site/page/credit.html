@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<title>Accueil - Ingénieurs Engagés</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />	
+	<link rel="shortcut icon" type="image/png" href="../image/logo.png"/>
+</head>
+
+<body style="margin: 0px;">
+
+	<div class="width= 100%; background-color:#333;">
+		<button onclick="myFunction2()" class="bouton">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</button>
+	</div>
+
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+	<script>
+		function myFunction2() {
+		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+		}
+	</script>
+
+
+<div id="myDIV" style="display: none;">
+		<ul class="navbar_mobile">
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+				<div class="dropdown-content">
+					<a href="histoire.html" style="text-align: center">Ingénieurs pour demain</a>
+					<a href="valeur.html" style="text-align: center">Nos valeurs</a>
+					<a href="quizz.html" style="text-align: center">Quizz</a>
+				</div>
+			</li>
+			<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+			<li><a href="france.html">A travers la France</a></li>
+			<li><a href="joign.html">Nous rejoindre</a></li>
+		</ul>
+	</div>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Accueil</a></li>
+		<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+			<div class="dropdown-content">
+				<a href="histoire.html">Ingénieurs pour demain</a>
+				<a href="valeur.html">Nos valeurs</a>
+				<a href="quizz.html">Quizz</a>
+			</div>
+		</li>
+		<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+		<li><a href="france.html">A travers la France</a></li>
+		<li><a href="joign.html">Nous rejoindre</a></li>
+	</ul>
+</body>
+
+<footer>
+	<div class="foot_disp">
+		<p>Site réalisé par : Clément Rousseau |&nbsp;<a href="contact.html" style="color: cornsilk;">Nous contacter</a>&nbsp;|&nbsp;<a href="credit.html" style="color: cornsilk;">Crédits</a></p>
+	</div>
+</footer>

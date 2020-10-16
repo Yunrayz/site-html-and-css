@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<title>Accueil - Ingénieurs Engagés</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />	
+	<link rel="shortcut icon" type="image/png" href="../image/logo.png"/>
+</head>
+
+<body style="margin: 0px; background-image: url(../image/fond_5.jpg); background-size: cover; background-position: center; background-attachment: fixed">
+
+	<div class="width= 100%; background-color:#333;">
+		<button onclick="myFunction2()" class="bouton">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</button>
+	</div>
+
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+	<script>
+		function myFunction2() {
+		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+		}
+	</script>
+
+	<div id="myDIV" style="display: none;">
+		<ul class="navbar_mobile">
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+				<div class="dropdown-content">
+					<a href="histoire.html" style="text-align: center">Ingénieurs pour demain</a>
+					<a href="valeur.html" style="text-align: center">Nos valeurs</a>
+					<a href="quizz.html" style="text-align: center">Quizz</a>
+				</div>
+			</li>
+			<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+			<li><a class="active" href="france.html">A travers la France</a></li>
+			<li><a href="joign.html">Nous rejoindre</a></li>
+		</ul>
+	</div>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Accueil</a></li>
+		<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+			<div class="dropdown-content">
+				<a href="histoire.html">Ingénieurs pour demain</a>
+				<a href="valeur.html">Nos valeurs</a>
+				<a href="quizz.html">Quizz</a>
+			</div>
+		</li>
+		<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+		<li><a class="active" href="france.html">A travers la France</a></li>
+		<li><a href="joign.html">Nous rejoindre</a></li>
+	</ul>
+
+	<div style="background-image: url(image/fond.jpg); background-size: cover; background-position: center; background-attachment: fixed; display: flex; justify-content: center;">
+		<div class="texte_on_parallax">
+			<div class="texte_index">
+				<h1 style="font-size: 70px;">Ingénieurs engagés à travers la France</h1>
+
+				<h1>Les groupes locaux</h1>
+
+				<p>
+					Les groupes locaux sont rattachés à un lieu ou une école et se focalisent sur des actions concrètes. Par exemple :
+					<ul>
+						<li>Faire des actions de sensibilisation : conférences, projections de films, méthodes d’éducation populaire et autres événements permettant de susciter le débat, faire réfléchir, découvrir des initiatives locales et donner envie d’agir</li>
+						<li>Faire évoluer les enseignements : sondages, travail de réflexion avec les enseignants et les administrations, collaborations avec les élus étudiants</li>
+						<li>Agir sur le campus pour obtenir des repas bio/locaux dans les cantines, proposer des bacs de tri dans les écoles, mettre en place des paniers bio, etc</li>
+						<li>Entrer en relation avec des entreprises éthiques et les associations pour créer un forum des entreprises alternatif…</li>
+						<li>Et bien d’autres choses encore !</li>
+					</ul>
+				</p>
+
+				<h2>Liste des groupes locaux</h2>
+				<p>
+					<ul>
+						<li>INSA Toulouse</li>
+						<li>Ingénieurs Citoyens Grenoble</li>
+						<li>UTT Troyes</li>
+						<li>UTBM Belfort-Montbéliard</li>
+						<li>UTC Compiègne</li>
+						<li>ENSEEIHT Toulouse</li>
+						<li>Supaéro Toulouse</li>
+						<li>Ingénieurs pour Demain INSA Toulouse</li>
+						<li>CentraleSupélec</li>
+						<li>SIGMA Clermont</li>
+						<li>Le vôtre peut-être ?</li>
+					</ul>
+				</p>
+
+				<h2>Créer un groupe local</h2>
+				<p>Il est très facile de créer un nouveau groupe local lié au réseau, et toute la communauté sera là pour t’aider dans cette folle aventure ! Il est également possible de rattacher une association existante à Ingénieurs Engagés : il suffit de le demander ! La seule contrainte ? Être en accord avec la charte de valeurs, et donner quelques nouvelles de temps en temps… Pas grand chose de plus.</p>
+				<p>Les idées et les possibilités sont infinies, et pour cause : les groupes locaux sont totalement libres et autogérés ! Tant qu’ils n’entrent pas en conflit avec la charte du mouvement, Ingénieurs Engagés ne limite en rien leurs actions et leurs décisions et à l’inverse, le cadre d’Ingénieurs Engagés leur offre de nouvelles possibilités : se faire connaître, échanger et rencontrer d’autres groupes locaux, se mettre en lien avec des projets nationaux, découvrir des parcours d’anciens étudiants, et plein de choses encore !</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<footer>
+	<div class="foot_disp">
+		<p>Site réalisé par : Clément Rousseau |&nbsp;<a href="contact.html" style="color: cornsilk;">Nous contacter</a>&nbsp;|&nbsp;<a href="credit.html" style="color: cornsilk;">Crédits</a></p>
+	</div>
+</footer>

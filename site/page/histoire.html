@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<title>Ingénieurs pour demain - Ingénieurs Engagés</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css" />	
+	<link rel="shortcut icon" type="image/png" href="../image/logo.png"/>
+</head>
+
+<body style="margin: 0px; background-image: url(../image/fond_4.jpg); background-size: cover; background-position: center; background-attachment: fixed">
+
+	<div class="width= 100%; background-color:#333;">
+		<button onclick="myFunction2()" class="bouton">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</button>
+	</div>
+
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+	<script>
+		function myFunction2() {
+		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+		}
+	</script>
+
+
+	<div id="myDIV" style="display: none;">
+		<ul class="navbar_mobile">
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+				<div class="dropdown-content">
+					<a class="active" href="histoire.html" style="text-align: center">Ingénieurs pour demain</a>
+					<a href="valeur.html" style="text-align: center">Nos valeurs</a>
+					<a href="quizz.html" style="text-align: center">Quizz</a>
+				</div>
+			</li>
+			<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+			<li><a href="france.html">A travers la France</a></li>
+			<li><a href="joign.html">Nous rejoindre</a></li>
+		</ul>
+	</div>
+
+	<ul class="navbar">
+		<li><a href="../index.html">Accueil</a></li>
+		<li><a href="../index.html#qui">Qui sommes-nous ?</a></li>
+		<li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Le mouvement</a>
+			<div class="dropdown-content">
+				<a class="active" href="histoire.html">Ingénieurs pour demain</a>
+				<a href="valeur.html">Nos valeurs</a>
+				<a href="quizz.html">Quizz</a>
+			</div>
+		</li>
+		<li><a href="fonctionnement.html">Notre fonctionnement</a></li>
+		<li><a href="france.html">A travers la France</a></li>
+		<li><a href="joign.html">Nous rejoindre</a></li>
+	</ul>
+
+	
+	<div style="display: flex; justify-content: center;">
+		<div class="texte_on_parallax">
+			<div class="texte_index">
+				<h1 style="font-size: 70px;">Ingénieurs pour demain</h1>
+
+				<h1>Notre histoire</h1>
+
+				<p>Le mouvement Ingénieurs Engagés est né suite à la diffusion du documentaire « Ingénieur pour Demain ». Réalisé par des étudiant·e·s de l’INSA Lyon en mai 2017, celui-ci a été très rapidement relayé dans les écoles d’ingénieur·e·s où il a connu un véritable succès. Il semble ainsi faire écho au vécu d’un très grand nombre d’étudiant·e·s et ingénieur·e·s pour lesquels les questions du « Pour qui ? » et du « Pourquoi ? » sont essentielles au choix du métier.</p>
+				<iframe width="714" height="400" src="https://www.youtube.com/embed/72WzOAGzY1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="padding: 50px"></iframe>
+			
+				<p>Cette vidéo reflète en effet le malaise de toute une nouvelle génération d’élèves ingénieur·e·s envers les débouchés classiques, face aux enjeux traversés par nos sociétés. Dérouté·e·s par l’inertie globale en contraste avec la réalité écologique et sociale, de plus en plus d’entre nous questionnent les enjeux de la technique, le fonctionnement de nos sociétés et s’interrogent sur leur avenir en tant qu’ingénieur·e. A la recherche de leur voie professionnelle, ils·elles souhaitent contribuer à un monde plus juste et faire enfin bouger les choses.</p>
+
+				<p>
+					Pour autant, ce documentaire est porteur d’espoir car il dresse le portrait d’une société qui évolue, avec une nouvelle génération d’ingénieur·e·s de plus en plus consciente des enjeux. A l’INSA Lyon, un collectif formé d’étudiant·e·s et d’enseignant·e·s a fait le pari de faire évoluer les formations dans ce sens et a construit, avec l’approbation de l’administration, de nouveaux modules d’enseignement. Très inspirante, cette initiative s’est essaimée ! Suite à la diffusion de la vidéo, de nouvelles dynamiques locales ont en effet émergé dans plusieurs écoles d’ingénieur·e·s en France. Le désir d’agir des étudiant·e·s s’est transformé en groupes locaux d’Ingénieurs Engagés, dont la forme peut être très variable et s’adapte aux besoins et aux problématiques propres à chaque établissement.
+					<br>
+					De cet engouement est née une communauté rassemblée sur un groupe Facebook, puis sur un serveur Discord devenu la plateforme de discussion et d’organisation du mouvement : en l’espace de quelques semaines, le mouvement Ingénieurs Engagés est né en France !
+				</p>
+
+				<p>Pendant un an, des membres très investi·e·s ont ensuite essayé de définir un cadre fédérateur, afin que le dynamisme créé puisse continuer de prendre de l’ampleur sans s’éteindre. Dans un souci d’horizontalité, d’ouverture et de transparence totale en interne tout comme en externe, le mouvement s’est ainsi structuré au fil du temps jusqu’à devenir ce qu’il est aujourd’hui : une fédération d’étudiant·e·s et ingénieur·e·s déterminé·e·s à agir ensemble, au sein duquel de plus en plus de groupes et de projets voient le jour.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<footer>
+	<div class="foot_disp">
+		<p>Site réalisé par : Clément Rousseau |&nbsp;<a href="contact.html" style="color: cornsilk;">Nous contacter</a>&nbsp;|&nbsp;<a href="credit.html" style="color: cornsilk;">Crédits</a></p>
+	</div>
+</footer>
